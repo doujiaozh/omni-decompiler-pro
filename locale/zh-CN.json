@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Omni-Decompiler-Pro 万物反编译引擎",
+    "description": "万能反编译调度引擎：嗅探文件魔数，自动调用最优开源反编译器（jadx、ILSpy、objdump、wabt），缺失工具按需自动下载。"
+  }
+}

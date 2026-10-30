@@ -1,0 +1,9 @@
+# cordis.patch.yml — Omni-Decompiler-Pro bundle patch
+#
+# Registers the plugin's single contribution (the `omni-decompile` tool row)
+# with the tools registry. Later layers may replace this row wholesale by id.
+
+- id: omni-decompiler-pro
+  insert:
+    - id: tools.omni-decompile
+      name: omni-decompiler-pro

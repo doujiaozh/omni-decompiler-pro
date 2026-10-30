@@ -1,0 +1,85 @@
+{
+  "name": "omni-decompiler-pro",
+  "version": "0.1.0",
+  "description": "Universal decompiler engine for DeepSeek Harness: sniffs any file's magic bytes and routes it to the best open-source decompiler (jadx, ILSpy, objdump, wabt), auto-downloading missing tools on demand. APK/DEX/JAR/CLASS, PE (incl. .NET), ELF, WASM and more.",
+  "type": "module",
+  "license": "MIT",
+  "author": "doujiaozh",
+  "homepage": "https://github.com/doujiaozh/omni-decompiler-pro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doujiaozh/omni-decompiler-pro.git"
+  },
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md",
+    "README-zh.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "decompiler",
+    "reverse-engineering",
+    "jadx",
+    "ilspy",
+    "objdump",
+    "wasm",
+    "wabt",
+    "apk",
+    "dex",
+    "pe",
+    "elf"
+  ],
+  "engines": {
+    "node": ">=18.20.0",
+    "dsh": ">=0.2.1-0 <0.3.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "schemastery": "^3.18.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5",
+    "@deepseek-ai/dsh-tools": "0.2.1-rc.2",
+    "@types/node": "^18.19.0 || ^20.0.0 || ^22.0.0 || ^24.0.0",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.5 <5.0.0",
+    "@deepseek-ai/dsh-tools": ">=0.2.1-0 <0.3.0",
+    "@deepseek-ai/dsh": ">=0.2.1-0 <0.3.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

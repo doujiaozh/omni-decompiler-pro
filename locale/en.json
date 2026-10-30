@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Omni-Decompiler-Pro",
+    "description": "Universal decompiler engine: sniff any file's magic bytes and route it to the best open-source decompiler (jadx, ILSpy, objdump, wabt), auto-downloading missing tools on demand."
+  }
+}
