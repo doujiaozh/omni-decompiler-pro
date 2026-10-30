@@ -18,8 +18,9 @@
     "./icon": "./icon.svg"
   },
   "files": [
-    "lib",
-    "locale/*.json",
+    "lib/",
+    "./lib/index.js",
+    "locale/",
     "icon.svg",
     "cordis.patch.yml",
     "LICENSE",
@@ -43,7 +44,7 @@
     "elf"
   ],
   "engines": {
-    "node": ">=18.20.0",
+    "node": "^22.19.0 || >=24.0.0",
     "dsh": ">=0.2.1-0 <0.3.0"
   },
   "scripts": {
@@ -62,8 +63,8 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@deepseek-ai/cordis": ">=4.0.5 <5.0.0",
-    "@deepseek-ai/dsh-tools": ">=0.2.1-0 <0.3.0",
+    "@deepseek-ai/cordis": "^4.0.2",
+    "@deepseek-ai/dsh-tools": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0",
     "@deepseek-ai/dsh": ">=0.2.1-0 <0.3.0"
   },
   "peerDependenciesMeta": {
