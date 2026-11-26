@@ -116,6 +116,10 @@ pnpm typecheck   # tsc --noEmit
 pnpm build       # tsdown → lib/
 ```
 
+## Run
+
+This project does not declare a run script. Use the usage section above or load the built artifact in the target runtime.
+
 ## License
 
 MIT © doujiaozh
